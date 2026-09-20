@@ -1,0 +1,58 @@
+{
+  "target": "github:atomeam/glassbox",
+  "promote": false,
+  "approval": "required",
+  "claims": [
+    {
+      "id": "mem-2026-09-20T22-openai-tunnel-client",
+      "persona": "growth-engine",
+      "text": "OpenAI published Apache-2.0 tunnel-client so private or localhost MCP servers can reach ChatGPT, Codex, Responses API, and AgentKit without a public inbound port.",
+      "status": "UNVERIFIED",
+      "kind": "tool_capability",
+      "source_url": "https://github.com/openai/tunnel-client",
+      "proof_quote": "connect private or localhost MCP servers to ChatGPT, Codex, the Responses API, and AgentKit without exposing them to the public internet.",
+      "attested_at": "2026-09-20T22:00:00Z",
+      "expires_at": "2026-10-20T22:00:00Z",
+      "content_hash": "sha256:37c2752aa3c506fe5044f471edfe22f1d087e9a4cbbbb4e86fdfaf9528d49262",
+      "prior_claim_ids": [],
+      "note": "Hourly candidate. Do not quote as PROVEN."
+    },
+    {
+      "id": "mem-2026-09-20T22-qwen-image-21",
+      "persona": "growth-engine",
+      "text": "Alibaba released Qwen-Image-2.1, a 7B single-stream DiT with native RGBA generation and up to ten reference images, under a research-only license.",
+      "status": "UNVERIFIED",
+      "kind": "market_signal",
+      "source_url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+      "proof_quote": "Generate regular or transparent (RGBA) images from text, edit transparent layers, and extract subjects from photographs—all in one model.",
+      "attested_at": "2026-09-20T22:00:00Z",
+      "expires_at": "2026-09-27T22:00:00Z",
+      "content_hash": "sha256:693135f1343e8cd5b94bfc6e35ba4174eca9d8967df004a3b3b4d79a809246a8",
+      "prior_claim_ids": [],
+      "note": "Hourly candidate. Do not quote as PROVEN. License is qwen-research, not Apache."
+    },
+    {
+      "id": "mem-2026-09-20T22-void-mcp-hold-tunnel",
+      "persona": "growth-engine",
+      "text": "A $49/mo Void Monthly add-on can wrap customer MCP servers with outbound-only tunnel-client plus A-to-Mind human hold-gate so private tools never get a public endpoint.",
+      "status": "UNVERIFIED",
+      "kind": "monetization",
+      "source_url": "https://developers.openai.com/api/docs/guides/secure-mcp-tunnels",
+      "proof_quote": "Secure MCP Tunnel lets you connect private MCP servers to supported OpenAI products without opening inbound firewall ports or exposing those servers to the public internet.",
+      "attested_at": "2026-09-20T22:00:00Z",
+      "expires_at": "2026-10-04T22:00:00Z",
+      "content_hash": "sha256:2f7b1878393202b349a351fd6b5fe522056cf753b671fd2d4866c0236aed04ce",
+      "prior_claim_ids": ["mem-2026-09-20T22-openai-tunnel-client"],
+      "note": "Hourly candidate. Do not quote as PROVEN."
+    }
+  ],
+  "corroborations": [],
+  "proposed_files": [
+    {
+      "repo": "atomeam/a-to-mind.com",
+      "path": "index.html",
+      "action": "patch",
+      "diff": "@@ section #minds\n+    <section class=\"block\" id=\"private-mcp\">\n+      <h2>Private MCP</h2>\n+      <p class=\"muted\">Outbound-only tunnel. No inbound port. The hold-gate still sits on every write. Candidate copy — not live until a glassbox merge.</p>\n+    </section>\n"
+    }
+  ]
+}
